@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Consulta de Dados</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">">
+</head>
+
+<body class="yellow-bg">
+    <h1>Consulta de Dados</h1>
+    <form method="POST">
+        <label for="query_param">Campo de Consulta:</label>
+        <select name="query_param">
+            <option value="nf">NF</option>
+            <option value="motorista">Motorista</option>
+            <option value="veiculo">Veículo</option>
+            <option value="placa">Placa</option>
+            <option value="cep">CEP</option>
+            <option value="logradouro">Logradouro</option>
+            <option value="numero">Número</option>
+            <option value="bairro">Bairro</option>
+            <option value="cidade">Cidade</option>
+            <option value="uf">UF</option>
+        </select>
+        <input type="text" name="search_value">
+        <button type="submit">Buscar</button>
+    </form>
+    <table>
+        <tr>
+            <th>NF</th>
+            <th>Motorista</th>
+            <th>Veículo</th>
+            <th>Placa</th>
+            <th>CEP</th>
+            <th>Logradouro</th>
+            <th>Número</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>UF</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.nf }}</td>
+            <td>{{ item.motorista }}</td>
+            <td>{{ item.veiculo }}</td>
+            <td>{{ item.placa }}</td>
+            <td>{{ item.cep }}</td>
+            <td>{{ item.logradouro }}</td>
+            <td>{{ item.numero }}</td>
+            <td>{{ item.bairro }}</td>
+            <td>{{ item.cidade }}</td>
+            <td>{{ item.uf }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

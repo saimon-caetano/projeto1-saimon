@@ -1,0 +1,73 @@
+/* Estilo para o corpo da página */
+body {
+    background: linear-gradient(to right, yellow 50%, black 50%);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Estilo para o quadro esquerdo (amarelo) */
+.left-panel {
+    flex: 1;
+    background-color: yellow;
+    padding: 20px;
+    border-right: 2px solid black;
+}
+
+/* Estilo para o quadro direito (preto) */
+.right-panel {
+    flex: 1;
+    background-color: black;
+    padding: 20px;
+}
+
+/* Estilo para o título */
+h1 {
+    text-align: center;
+}
+
+/* Estilo para o formulário */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilo para as etiquetas */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilo para os botões */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: yellow;
+}

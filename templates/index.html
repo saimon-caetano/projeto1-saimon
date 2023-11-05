@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inserir Dados</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="yellow-bg">
+    <h1>Inserir Dados</h1>
+    <form method="POST">
+        <label for="nf">NF:</label>
+        <input type="text" name="nf" required><br>
+        <label for="motorista">Motorista:</label>
+        <input type="text" name="motorista" required><br>
+        <label for="veiculo">Veículo:</label>
+        <input type="text" name="veiculo" required><br>
+        <label for="placa">Placa:</label>
+        <input type="text" name="placa" required><br>
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" required><br>
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" name="logradouro" required><br>
+        <label for="numero">Número:</label>
+        <input type="text" name="numero" required><br>
+        <label for="bairro">Bairro:</label>
+        <input type="text" name="bairro" required><br>
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" required><br>
+        <label for="uf">UF:</label>
+        <input type="text" name="uf" required><br>
+        <button type="submit">Inserir</button>
+
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-success">
+        {{ messages[0] }}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+</body>
+
+</html>
